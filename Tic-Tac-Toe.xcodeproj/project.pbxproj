@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD106AA42060093A00AC2314 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FD106AA12060093A00AC2314 /* Icon@2x.png */; };
+		FD106AA52060093A00AC2314 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = FD106AA22060093A00AC2314 /* Icon-72.png */; };
+		FD106AA62060093A00AC2314 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FD106AA32060093A00AC2314 /* Icon.png */; };
 		FD736164205AD0DE00152265 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD736163205AD0DE00152265 /* AppDelegate.swift */; };
 		FD736166205AD0DE00152265 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD736165205AD0DE00152265 /* ViewController.swift */; };
 		FD736169205AD0DE00152265 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD736167205AD0DE00152265 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD106AA12060093A00AC2314 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		FD106AA22060093A00AC2314 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		FD106AA32060093A00AC2314 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		FD736160205AD0DE00152265 /* Tic-Tac-Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic-Tac-Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD736163205AD0DE00152265 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD736165205AD0DE00152265 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD106AA02060092800AC2314 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				FD106AA22060093A00AC2314 /* Icon-72.png */,
+				FD106AA32060093A00AC2314 /* Icon.png */,
+				FD106AA12060093A00AC2314 /* Icon@2x.png */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		FD736157205AD0DE00152265 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +70,7 @@
 		FD736162205AD0DE00152265 /* Tic-Tac-Toe */ = {
 			isa = PBXGroup;
 			children = (
+				FD106AA02060092800AC2314 /* Supporting */,
 				FD736163205AD0DE00152265 /* AppDelegate.swift */,
 				FD736165205AD0DE00152265 /* ViewController.swift */,
 				FD736167205AD0DE00152265 /* Main.storyboard */,
@@ -123,7 +140,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD106AA62060093A00AC2314 /* Icon.png in Resources */,
 				FD73616E205AD0DE00152265 /* LaunchScreen.storyboard in Resources */,
+				FD106AA52060093A00AC2314 /* Icon-72.png in Resources */,
+				FD106AA42060093A00AC2314 /* Icon@2x.png in Resources */,
 				FD73616B205AD0DE00152265 /* Assets.xcassets in Resources */,
 				FD736169205AD0DE00152265 /* Main.storyboard in Resources */,
 			);

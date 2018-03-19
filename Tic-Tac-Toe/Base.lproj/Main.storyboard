@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,7 +16,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhU-Bo-6lU">
@@ -43,21 +43,101 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRs-OU-xJ1" userLabel="Useable Area">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2d7-rl-Ifn" userLabel="Board">
-                                        <rect key="frame" x="20" y="159" width="374" height="414"/>
+                                        <rect key="frame" x="49" y="145" width="670" height="670"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0o-rx-lkE">
-                                                <rect key="frame" x="49" y="75" width="46" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </button>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8f7-Gp-c3J">
+                                                <rect key="frame" x="0.0" y="0.0" width="670" height="670"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cIo-4b-6yE">
+                                                <rect key="frame" x="0.0" y="0.0" width="670" height="670"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MkH-cd-66F">
+                                                        <rect key="frame" x="0.0" y="0.0" width="670" height="223.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0o-rx-lkE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="223.5" height="223.5"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DeI-IE-gc7"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pA-6i-wVR">
+                                                                <rect key="frame" x="223.5" y="0.0" width="223" height="223.5"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8O-Zh-VMD"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqD-tt-EFW">
+                                                                <rect key="frame" x="446.5" y="0.0" width="223.5" height="223.5"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uns-kH-Ww6"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="AaX-OK-1hr">
+                                                        <rect key="frame" x="0.0" y="223.5" width="670" height="223"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-n4-ea9">
+                                                                <rect key="frame" x="0.0" y="0.0" width="223.5" height="223"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l86-D4-g2R"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hy-q5-sCP">
+                                                                <rect key="frame" x="223.5" y="0.0" width="223" height="223"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNa-Ld-1Hs"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6g-cL-BGX">
+                                                                <rect key="frame" x="446.5" y="0.0" width="223.5" height="223"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHR-AG-Tui"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ANF-ue-RtN">
+                                                        <rect key="frame" x="0.0" y="446.5" width="670" height="223.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7n-4J-zkt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="223.5" height="223.5"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyU-ss-yIg"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEh-cc-OqP">
+                                                                <rect key="frame" x="223.5" y="0.0" width="223" height="223.5"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIq-n7-g53"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ov-Op-Atd">
+                                                                <rect key="frame" x="446.5" y="0.0" width="223.5" height="223.5"/>
+                                                                <connections>
+                                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lgc-j5-y71"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="cIo-4b-6yE" firstAttribute="top" secondItem="2d7-rl-Ifn" secondAttribute="top" id="3IU-J3-OSR"/>
                                             <constraint firstAttribute="width" constant="670" id="9uD-iv-YHk"/>
+                                            <constraint firstItem="8f7-Gp-c3J" firstAttribute="top" secondItem="2d7-rl-Ifn" secondAttribute="top" id="KuL-7H-iS2"/>
+                                            <constraint firstItem="cIo-4b-6yE" firstAttribute="leading" secondItem="2d7-rl-Ifn" secondAttribute="leading" id="M1k-Rz-D4s"/>
                                             <constraint firstAttribute="width" secondItem="2d7-rl-Ifn" secondAttribute="height" multiplier="28:31" id="O4L-ZL-Ncl"/>
+                                            <constraint firstAttribute="trailing" secondItem="8f7-Gp-c3J" secondAttribute="trailing" id="TdQ-lL-jWp"/>
+                                            <constraint firstAttribute="bottom" secondItem="cIo-4b-6yE" secondAttribute="bottom" id="USH-1I-xtq"/>
+                                            <constraint firstAttribute="trailing" secondItem="cIo-4b-6yE" secondAttribute="trailing" id="k2T-oT-e64"/>
+                                            <constraint firstItem="8f7-Gp-c3J" firstAttribute="leading" secondItem="2d7-rl-Ifn" secondAttribute="leading" id="lYg-mq-m1z"/>
                                             <constraint firstAttribute="height" constant="670" id="xDL-OS-zLd"/>
+                                            <constraint firstAttribute="bottom" secondItem="8f7-Gp-c3J" secondAttribute="bottom" id="xyD-rQ-Sz9"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -85,7 +165,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="2d7-rl-Ifn" firstAttribute="centerY" secondItem="cRs-OU-xJ1" secondAttribute="centerY" id="DVW-WI-038">
                                         <variation key="widthClass=compact" constant="30"/>
@@ -193,10 +272,24 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="gameBoardImageView" destination="8f7-Gp-c3J" id="DAa-0G-fCV"/>
+                        <outlet property="gameStateLabel" destination="NMv-fG-xEl" id="bDH-RM-xhi"/>
+                        <outlet property="gameStateNavBar" destination="av6-Uq-aL3" id="0RO-Ef-HXt"/>
+                        <outletCollection property="gameBoardButtons" destination="Y0o-rx-lkE" collectionClass="NSMutableArray" id="dok-ga-8xO"/>
+                        <outletCollection property="gameBoardButtons" destination="1pA-6i-wVR" collectionClass="NSMutableArray" id="njE-jz-dHI"/>
+                        <outletCollection property="gameBoardButtons" destination="sqD-tt-EFW" collectionClass="NSMutableArray" id="ZME-YH-iHC"/>
+                        <outletCollection property="gameBoardButtons" destination="rqo-n4-ea9" collectionClass="NSMutableArray" id="6CQ-x3-Ncp"/>
+                        <outletCollection property="gameBoardButtons" destination="0hy-q5-sCP" collectionClass="NSMutableArray" id="rls-rh-JKH"/>
+                        <outletCollection property="gameBoardButtons" destination="d6g-cL-BGX" collectionClass="NSMutableArray" id="kpG-uZ-8XI"/>
+                        <outletCollection property="gameBoardButtons" destination="a7n-4J-zkt" collectionClass="NSMutableArray" id="8x8-eS-mmQ"/>
+                        <outletCollection property="gameBoardButtons" destination="vEh-cc-OqP" collectionClass="NSMutableArray" id="tE2-4D-Ewg"/>
+                        <outletCollection property="gameBoardButtons" destination="9Ov-Op-Atd" collectionClass="NSMutableArray" id="h9A-Wv-uFR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="52.623688155922046"/>
+            <point key="canvasLocation" x="31.25" y="52.1484375"/>
         </scene>
     </scenes>
 </document>
